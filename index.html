@@ -16,7 +16,12 @@ a.parttitle {
 <body>
 	<script>
 	
-	var abstracts = {cbmi_title:'<cite>Comparison of Two Methods for Unsupervised Person Identification in TV Shows</cite> <br> 2014 CBMI (IEEE worshop on Content based Multimedia Indexing) ',
+	var abstracts = {
+	iccv_title:'<cite>Probabilistic Structure from Motion with Objects</cite> <br> 2017 ICCV, International Conference on Computer Vision',
+        iccv_abstract:'<a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Gay_Probabilistic_Structure_From_ICCV_2017_paper.pdf">pdf</a> <br> Paul Gay, Vaibhav Bansal, Cosimo Rubino, Alessio Del Bue <p> This paper proposes a probabilistic approach to recover affine camera calibration and objects position/occupancy from multi-view images using solely the information from image detections. We show that remarkable object localisation and volumetric occupancy can be recovered by including both geometrical constraints and prior information given by objects CAD models from the ShapeNet dataset. This can be done by recasting the problem in the context of a probabilistic framework based on PPCA that enforces both geometrical constraints and the associated semantic given by the object category extracted by the object detector. We present results on synthetic data and extensive real evaluation on the ScanNet datasets on more than 1200 image sequences to show the validity of our approach in realistic scenarios. In particular, we show that 3D statistical priors are key to obtain reliable reconstruction especially when the input detections are noisy, a likely case in real scenes.</p>' ,
+	cviu_title:'<cite>A conditional random field approach for audio-visual people diarization</cite> <br> 2014 ICASSP (International Conference on Acoustic Speech and Signal Processing)',
+        cviu_abstract:'Paul Gay, Cosimo Rubino, Marco Crocco, Alessio Del Bue <p> This paper presents an efficient framework to include the information of objects position in classical multi-view geometry problems for 3D reconstruction. In particular, we present two main contributions to Structure from Motion (SfM) using factorization methods for the affine camera case. First, we introduce a method based on factorization that extends the classical 3D point cloud reconstruction based on 2D point correspondences to objects using detection correspondences. In this case, objects are approximated as quadrics in 3D (or more specifically as ellipsoids) and therefore projected as conics in 2D onto the image plane. Therefore, instead of having 2D point to point correspondences, we solve a conic to conic correspondence problem in the setting of affine factorization methods. The solution to this problem provides a 3D location/occupancy of the object together with an affine camera calibration. This is shown to be a generalisation of the standard Tomasi and Kanade factorization method with rigid objects. Secondly, we use the estimated object locations/occupancies to robustly estimate the 3D point cloud from 2D point correspondences by constructing a prior that relates 2D points locations and the positions of the object ellipsoids in 3D. This is done by recasting the problem as a probabilistic matrix factorization where the priors are not generic but truly representative of the scene structure as a composition of objects. In particular we show that by using objects to points relations, we achieve compelling results with high rate of missing data and noisy 2D data, a common occurrence when dealing with man-made textureless objects.</p>',
+	cbmi_title:'<cite>Comparison of Two Methods for Unsupervised Person Identification in TV Shows</cite> <br> 2014 CBMI (IEEE worshop on Content based Multimedia Indexing) ',
 	cbmi_abstract:' <a href="http://publications.idiap.ch/downloads/papers/2014/Gay_CBMI_2014.pdf">pdf</a> <br>  Paul Gay, Gregor Dupuy, Jean-Marc Odobez, Meignier Sylvain and Paul Deleglise <p> We address the task of identifying people appearing in TV shows. The target persons are all people whose identity is said or written, like the journalists and the well known people, as politicians, athletes, celebrities, etc. In our approach, overlaid names displayed on the images are used to identify the persons without any use of biometric models for the speakers and the faces. Two identification methods are evaluated as part of the REPERE French evaluation campaign. The first one relies on co-occurrence times between overlay person names and speaker/face clusters, and rule-based decisions which assign a name to each monomodal cluster. The second method uses a Conditionnal Random Field (CRF) which combine different types of co-occurrence statistics and pair-wised constraints to jointly identify speakers and faces.</p>',
 	icip_abstract:' <a href="http://publications.idiap.ch/downloads/papers/2015/Gay_ICIP_2014.pdf">pdf</a> <br> Paul Gay, Elie Khoury, Sylvain Meignier, Jean-Marc Odobez, and Paul Deleglise <p>We investigate the problem of face identification in broadcast programs where people names are obtained from text overlays automatically processed with Optical Character Recognition (OCR) and further linked to the faces throughout the video.  To solve the face-name association and propagation, we propose a novel approach that combines the positive effects of two Conditional Random Field (CRF) models: a CRF for person diarization (joint temporal segmentation and association of voices and faces) that benefit from the combination of multiple cues including as main contributions the use of identification sources (OCR appearances) and recurrent local face visual background (LFB) playing the role of a namedness feature; a second CRF for the joint identification of the person clusters that improves identification performance thanks to the use of further diarization statistics.  Experiments conducted on a recent and substantial public dataset of 7 different shows  demonstrate  the  interest  and  complementarity  of  the different modeling steps and information sources, leading to state of the art result </p>',
 	icip_title:'<cite>A conditional random field approach in broadcast news using overlaid texts</cite> <br> 2014 ICIP (IEEE International Conference on Image Processing)',
@@ -81,9 +86,19 @@ a.parttitle {
 	<br>
 	<a class=parttitle>Post-doc in Italy: </a> I am currently a post-doctoral fellow at IIT/VGM (Genova Italy) with Alessio Del Bue,  where I work on merging multiple view geometry and machine learning. <!-- <a href="https://www.youtube.com/watch?v=i7ierVkXYa8">structure from motion</a> and motion segmentation.-->  We build models which understand a 3D scene by localizing the objects, estimate their occupancy and recognize the relations between them.
         <h2>Publications <a style="color:black;font: 0.65em Arial, sans-serif">(click on titles for abstracts and download links)</a> <a name="publi"> </a> </h2>
-        <h3>Post-Doc period: 3D visual scene understanding </h3>
-        
-        <h3 >Phd Period: audio-visual people indexing in broadcast news</h3>
+        <h3>2016-2017, Post-Doc period: 3D visual scene understanding </h3>
+        <a onmouseover="this.style.cursor='pointer'" conf="iccv" value="title" onclick="fonction(this)">
+        <cite>Probabilistic Structure from Motion with Objects</cite> <br> 
+        2017 ICCV, International Conference on Computer Vision
+        </a>
+        <br>
+        <br>
+        <a onmouseover="this.style.cursor='pointer'" conf="cviu" value="title" onclick="fonction(this)"> 
+        <cite> Factorization based Structure from Motion with Object Priors</cite> <br>
+        2017 CVIU (Computer Vision and Image Understanding) 
+        </a>
+
+        <h3 >2014-2011, Phd Period: audio-visual people indexing in broadcast news</h3>
         <a onmouseover="this.style.cursor='pointer'" conf="cbmi" value="title" onclick="fonction(this)"> 
         <cite> Comparison of Two Methods for Unsupervised Person Identification in TV Shows </cite> <br>
         2014 CBMI (IEEE worshop on Content based Multimedia Indexing) 
@@ -114,13 +129,14 @@ a.parttitle {
         </a>
         <br>
         <br>
+        Phd thesis (in french): <a href="these_paul_gay.pdf">Audiovisual segmentation and identification of persons in broadcast news.</a>
+        <br>
+        <h3>2011 Master internship</h3>
         <a onmouseover="this.style.cursor='pointer'"  conf="ronan" value="title" onclick="fonction(this)">
         <cite>Bags-of-Features for fish school cluster characterization in pelagic ecosystems: application to the discrimination of juvenile and adult anchovy (Engraulis ringens) clusters off Peru</cite> <br>
         2012 Canadian Journal of Fisheries and Aquatic Sciences
         </a>
         <br>
-        <br>
-        Phd thesis (in french): <a href="these_paul_gay.pdf">Audiovisual segmentation and identification of persons in broadcast news.</a>
         <h2>Software<a name="software"> </a></h2> 
 
          <ul>
