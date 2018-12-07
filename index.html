@@ -17,6 +17,8 @@ a.parttitle {
 	<script>
 	
 	var abstracts = {
+	accv_title:'<cite>Visual Graphs from Motion (VGfM): Scene understanding with object geometry reasoning</cite> <br> 2018 ACCV, (Asian Conference on Computer Vision)'
+        accv_abstract:'<a href="https://arxiv.org/pdf/1807.05933.pdf">pdf</a> Recent approaches on visual scene understanding attempt to build a scene graph -- a computational representation of objects and their pairwise relationships. Such rich semantic representation is very appealing, yet difficult to obtain from a single image, especially when considering complex spatial arrangements in the scene. Differently, an image sequence conveys useful information using the multi-view geometric relations arising from camera motion. Indeed, in such cases, object relationships are naturally related to the 3D scene structure. To this end, this paper proposes a system that first computes the geometrical location of objects in a generic scene and then efficiently constructs scene graphs from video by embedding such geometrical reasoning. Such compelling representation is obtained using a new model where geometric and visual features are merged using an RNN framework. We report results on a dataset we created for the task of 3D scene graph generation in multiple views.' 
 	frontiers_title:'<cite> CRF-Based Context Modeling for Person Identification in Broadcast Videos </cite> <br> 2015 Frontiers journal in ICT ',
         frontiers_abstract:'Paul Gay, Sylvain Meignie Paul Deléglise and Jean-Marc Odobez <p>  We are investigating the problem of speaker and face identification in broadcast videos. Identification is performed by associating automatically extracted names from overlaid texts with speaker and face clusters. We aimed at exploiting the structure of news videos to solve name/cluster association ambiguities and clustering errors. The proposed approach combines iteratively two conditional random fields (CRF). The first CRF performs the person diarization (joint temporal segmentation, clustering, and association of voices and faces) jointly over the speech segments and the face tracks. It benefits from contextual information being extracted from the image backgrounds and the overlaid texts. The second CRF associates names with person clusters, thanks to co-occurrence statistics. Experiments conducted on a recent and substantial public dataset containing reports and debates demonstrate the interest and complementarity of the different modeling steps and information sources: the use of these elements enables us to obtain better performances in clustering and identification, especially in studio scenes.</p> ', 
         iccv_title:'<cite>Probabilistic Structure from Motion with Objects</cite> <br> 2017 ICCV, (International Conference on Computer Vision) ',
@@ -75,7 +77,6 @@ a.parttitle {
       <div class="text_padding">
 	      Welcome visitor! 
 	      <br>
-	      You will find on this page details about my research and teaching activities. The page is still under construction and lacks some details, do not hesitate to contact me if you want to catch up.
 	      <h2>The story behind my resume (<a href="Paul_Gay_resume.pdf" style="color: #660099">download it!</a>) </h2>
         <a name="biblio"> </a> 
 	<a class=parttitle>Studies: </a> I graduated in computer sciences from <a href="http://asi.insa-rouen.fr/">INSA Rouen</a> (France) in 2011 and obtained at the same time a M. of Sciences from university of Rouen. There I discovered machine learning, and get involved in the research projects of the <a href=http://www.litislab.fr/>LITIS laboratory</a>, building numerical instruments with the company "La Grande Fabrique" and acquiring and processing EEG signals with Rémy Flamary. To complete this master, I had the chance to found an internship position with <a href=https://perso.telecom-bretagne.eu/ronanfablet/>Ronan Fablet</a>, in Peru, on the classification of underwater animals in acoustic data.
@@ -91,6 +92,10 @@ a.parttitle {
 	<a class=parttitle>Post-doc in Italy: </a> I am currently a post-doctoral fellow at IIT/VGM (Genova Italy) with <a href=http://users.isr.ist.utl.pt/~adb/>Alessio Del Bue</a>,  where I work on merging multiple view geometry and machine learning. <!-- <a href="https://www.youtube.com/watch?v=i7ierVkXYa8">structure from motion</a> and motion segmentation.-->  We build models which understand a 3D scene by localizing the objects, estimate their occupancy and recognize the relations between them. I also advise the PhD student Vaibhav Bansal.
         <h2>Publications <a style="color:black;font: 0.65em Arial, sans-serif">(click on titles for abstracts and download links)</a> <a name="publi"> </a> </h2>
         <h3>2016-now: 3D visual scene understanding </h3>
+        <a onmouseover="this.style.cursor='pointer'" conf="accv" value="title" onclick="fonction(this)">
+	<cite>Visual Graphs from Motion (VGfM): Scene understanding with object geometry reasoning</cite> <br>
+	2018 ACCV, (Asian Conference on Computer Vision)
+	</a>	
         <a onmouseover="this.style.cursor='pointer'" conf="iccv" value="title" onclick="fonction(this)">
         <cite>Probabilistic Structure from Motion with Objects</cite> <br> 
         2017 ICCV, (International Conference on Computer Vision)
