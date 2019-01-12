@@ -1,0 +1,30 @@
+/*body {
+   background-image: url("images/pinceau.png");
+   background-repeat: no-repeat;
+   background-size: 20% 20%;
+}*/
+
+*{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-right: 80px;
+  margin-left: 80px;
+  text-align: center; 
+}
+
+img{
+  margin-left: auto;
+  display: block;
+  margin-right: auto;  
+  width:1000px;
+  height: auto;
+}
+
+img.arab{
+  margin-left: auto;
+  display: block;
+  margin-right: auto;  
+  width:100px;
+  height: auto;
+}
+
