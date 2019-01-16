@@ -1,19 +1,19 @@
-/*body {
-   background-image: url("images/pinceau.png");
-   background-repeat: no-repeat;
-   background-size: 20% 20%;
+/*ul.menu li{
+ text-align: center;
 }*/
 
+
+.content2 {
+  margin: -4px 0px 100px -252px;
+}
+
+
 *{
-  margin-top: 10px;
-  margin-bottom: 30px;
-  margin-right: 80px;
-  margin-left: 80px;
-  text-align: center; 
+  text-align: center;
 }
 
 img{
-  margin-left: auto;
+  margin-left: auto; /*because the one with * won't affect the images, because they are inline, if I remember*/
   display: block;
   margin-right: auto;  
   width:1000px;
