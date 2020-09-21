@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" encoding="ISO-8859-1">
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-2" />
+
+<head>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<title>Hilight VGM PSfMO</title>
+<link rel="stylesheet" href="common.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<div class="content">
+<ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#publi">Publications</a></li>
+      <li><a href="index.html#highlights">Research highlights</a></li>
+      <li><a href="index.html#software">Software</a></li>
+      <li><a href="index.html#teaching">Teaching activity</a></li>
+</ul>
+</div>
+
+<div class="content2">
+
+<h2>Probabilistic Structure from Motion with Object (ICCV 2017)</h2>
+
+
+The Visual Geometry and Modelling group has a strong expertise in geometry and 3D reconstruction. When I joined them in 2016, their recent efforts were aimed at merging their expertise in geometry with machine learning techniques to produce representations which can model both the structure (e.g. the 3D shape) and the semantic (e.g. object labels) of the scene.
+
+<h3>SfMO: 3D localization and occupancy from 2D detections</h3>
+
+A 2016 published VGM work showed that is is possible to recover ellipsoids, (the purple balloon) from a set of 2D object detections (the green ellipses). This method has been called Structure from Motion with Objects (SfMO) uses standard geometry techniques.
+
+<img src="images/sfm_problem.png">
+</br>
+
+In practice, <b>the mathematical formulation</b> of SfMO uses standad geometry techniques in the flavour of the tomashi and kanade factorization. The ellipses parameters are stacked in a matrix \(C\) where each \(C_{ij}\) block contains the 6 dimension vector of the object \(j\) detected in the image \(i\). And the factorization of this matrix enables to recover the parametrization of the cameras \(G_{i}\) and the ellipsoids. 
+
+
+<div style="display: flex; justify-content: center;">
+<img src="images/sfmo_equation.png">
+</div>
+
+<b> Limitations:</b> This method is mathetically exact but relies on some assumptions, among them: 
+<ul>
+	<li>Objects have the shape of ellipsoids </li>
+	<li>The noise in the 2D measurements is gaussian i.e. a least square optimiser is used.</li>
+</ul>
+
+Let's highlight the induced limitations in the case of the narrow baseline between the points of view. Consider the following real example where the images are taken from a very similar point. If we check the estimated ellipsoids shown in red, we can see that their length in the direction of the camera axis shown is badly estimated. The problem is that this bad solution is optimal in the least square sense. Indeed, the reprojection of the ellipsoids, shown as red ellipses are very close to the reprojection of the GT, shown in green.
+
+<img class="resize" src="images/low_baseline.png">
+
+<h3>Placing a shape prior on SfMO</h3>
+
+The motivation is to add prior information on the object shape thanks to the statistics collected on the thousands of CAD models of the ShapeNet dataset. An example of such information is that the shape of the bottle has mainly one degree of freedom which is the ratio between its diameter and its hight.  
+
+<div style="display: flex; justify-content: center;">
+<img src="images/pca_prior_bottle.png">
+</div>
+ 
+This prior can be included in the factorization by recasting the problem in the context of the standard Probabilistic Principal Component Analysis. The key observation for this reformulation is that the different parameters for the ellipsoid rotation and axis length can be separated, ie the vector of the 3D ellipsoids parameters \(Q_i\) can be decomposed as multiplication of a rotation matrix and a 3 dimension vector containing the axis length. We refer to the original paper for the mathematical details.
+In practice, this prior will discouraged wrongly elongated ellipsoids. The figure below shows some results on the kinect dataset: 
+
+<div style="display: flex; justify-content: center;">
+<img class="resize" src="images/kinect.png">
+</div>
+
+<br>
+<br>
+
+</body>
+
+
+
