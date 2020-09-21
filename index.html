@@ -46,7 +46,9 @@
 
 <div class="content">
 <ul class="menu">
+      <li><a href="index.html">Home</a></li>
       <li><a href="#publi">Publications</a></li>
+      <li><a href="#highlights">Research highlights</a></li>
       <li><a href="#software">Software</a></li>
       <li><a href="#teaching">Teaching activity</a></li>
 </ul>  
@@ -54,7 +56,7 @@
     <div class="sd_right">
       <div class="text_padding">
         <img height="155" width="120" src="images/face.jpg"> 
-        <h2>Contact</h2>
+        <h2>Paul Gay</h2>
         <a onmouseover="this.style.cursor='pointer'" onclick="this.innerHTML='paul.gay@insa-rouen.fr'"><b>Click to reveal email</b></a><br>
         +39 340 518 14 96<br>
         6 rue du chateau, 11800 Badens, France<br>
@@ -66,9 +68,13 @@
     <div class="sd_left">
       <div class="text_padding">
 	      <br>
-	      <h2>Welcome Visitor! Here's the story behind <a href="Paul_Gay_resume.pdf" style="color: #660099">my resume</a> </h2>
+	      <h2>Welcome Visitor! </h2>
+        Let me introduce myself, coming from a computer vision and multimedia indexing background, I am currenlty an engineer at <a href="http://www.lumenai.fr/">LumenAI</a>. I work with our customers on document indexing, and am involved in a research project on graph analysis, dealing with unsupervised learning and graph neural networks.	      
         <a name="biblio"> </a> 
-	<a class=parttitle>Studies: 2006-2011 </a> I graduated in computer sciences from <a href="http://asi.insa-rouen.fr/">INSA Rouen</a> (France) in 2011 and obtained at the same time a M. of Sciences from university of Rouen. There I discovered machine learning, and get involved in the research projects of the <a href=http://www.litislab.fr/>LITIS laboratory</a>, building numerical instruments with the company "La Grande Fabrique" and acquiring and processing EEG signals with Remy Flamary. To complete this master, I had the chance to found an internship position with <a href=https://perso.telecom-bretagne.eu/ronanfablet/>Ronan Fablet</a>, in Peru, on the classification of underwater animals in acoustic data.
+        <br>
+        <br>
+        <h3>Here's the story behind <a href="Paul_Gay_resume.pdf" style="color: #660099">my resume</a></h3>
+	<a class=parttitle>Studies: 2006-2011 </a> I graduated in computer sciences from <a href="http://asi.insa-rouen.fr/">INSA Rouen</a> (France) in 2011 and obtained at the same time a M. of Sciences from university of Rouen. There I discovered machine learning, and get involved in the research projects of the <a href=http://www.litislab.fr/>LITIS laboratory</a>. To complete this master, I had the chance to found an internship position with <a href=https://perso.telecom-bretagne.eu/ronanfablet/>Ronan Fablet</a>, in Peru, on the classification of underwater animals in acoustic data.
         <br> 
         <a class=parttitle>Phd: 2011-2014</a> After this warm up, I started a phd under the supervision of Sylvain Meigner (<a href="www-lium.univ-lemans.fr">LIUM</a>, France) and Jean Marc Odobez (<a href="http://www.idiap.ch/">IDIAP Research Institute</a>, Switzerland).
         My research there focused on unsupervised Audio-visual person identification in broadcast data. 
@@ -82,7 +88,7 @@
 	<br>
 	<a class=parttitle>Late 2018<a/>, Before getting back into research, I went into some travelling, among other things, to practice my watercolors. You can see some samples <a href=aquarelles.html>there</a>.
 	<br>
-	<a class=parttitle>Currently:<a/> I am an engineer at <a href="http://www.lumenai.fr/">LumenAI</a>. I am work with customers on document indexing, and am involved in a research project on graph analysis, dealing with unsupervised learning and graph neural networks.
+
 	<!-- <a class=parttitle>Current state:</a> Before getting back into exciting research projects, I am doing some mountainerous trips and -->
         <h2>Publications <a style="color:black;font: 0.65em Arial, sans-serif">(click on titles for abstracts and download links)</a> <a name="publi"> </a> </h2>
         <h3>2016-2018: 3D visual scene understanding </h3>
@@ -149,16 +155,22 @@
         2012 Canadian Journal of Fisheries and Aquatic Sciences
         </a>
         <br>
+        <h2>Research highlights <a name="highlights"> </a></h2>
+        The Pavis/VGM group has a strong expertise in geometry and 3D reconstruction. When I joined them in 2016, recent efforts tend to merge their expertise in geometry with machine learning techniques to produce representations which can model both the structure (e.g. the 3D shape) and the semantic (e.g. object labels) of the scene. My two main contributions are:
+        <ul>
+        <li> <a href="highlight-vgm.html">PSfMO</a> a probabilistic method to impose prior on object reconstruction</li>
+        <li> <a href="highlight-vgm_gnn.html">VGfM</a> a geometry aware Graph neural network designed to detect object relationships in 3D scene.</li>
+        </ul>
+        <br>
         <h2>Software<a name="software"> </a></h2> 
 
          <ul>
-		 <li><a href="https://github.com/paulgay/sfmo_py">SfMO in python</a> I implemented a python version of the CVPR Structure from Motion with Objects paper, because of some computer vision classes I gave.</li>
+		 <li><a href="https://github.com/paulgay/sfmo_py">SfMO in python</a> I implemented a python version of the CVPR Structure from Motion with Objects paper, mostly for teaching purposes.</li>
 		 <li>There is a <a href="https://github.com/paulgay/VGfM">github</a> for the code of our ACCV paper. Unfortunately, it is not simple to use as you have to press more than one button. 
 		 <li>LfD method i.e. 3D location with perspective cameras, developped mainly by Cosimo Rubino and detailed in his 2018 PAMI. I added two improved versions: LfDc which uses additional linear constraints and has more accurate results (see our ACCV 2018 paper), and PLfDc which uses both constraints and the prior developed for PSfMO. <a href="https://gitlab.iit.it/pgay/lfd_lfdc_plfd">repo</a> </li>
 		      
 		        <li>Code for the PSfMO detailed in our ICCV 2017 paper: <a href="https://gitlab.iit.it/pgay/affine_psfmo">repo</a></li>
-   			<li>The CRF code I used in my phd for person cluster identification can be found at <a href="https://github.com/paulgay/crf_dia_ident">this github repository.</a></li>
-  			<li>Interspeech 2014 paper. I contributed to (by writing documentation) and extensively used the <a target="_blank" href="http://www-lium.univ-lemans.fr/diarization/doku.php">Lium speakerDiarization toolbox</a>. It is an ivector based system dedicated to speaker diarization in broadcast news. Please feel free to ask me any question about it.</li>
+   			<li>Interspeech 2014 paper. I contributed to (by writing documentation) and extensively used the <a target="_blank" href="http://www-lium.univ-lemans.fr/diarization/doku.php">Lium speakerDiarization toolbox</a>. It is an ivector based system dedicated to speaker diarization in broadcast news. Please feel free to ask me any question about it.</li>
 		</ul>         
         <h2>Teaching Activity<a name="teaching"> </a> </h2>
 	 University classes:
