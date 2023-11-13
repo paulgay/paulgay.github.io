@@ -33,7 +33,7 @@ A 2016 published VGM work showed that is is possible to recover ellipsoids, (the
 <img src="images/sfm_problem.png">
 </br>
 
-In practice, <b>the mathematical formulation</b> of SfMO uses standad geometry techniques in the flavour of the tomashi and kanade factorization. The ellipses parameters are stacked in a matrix \(C\) where each \(C_{ij}\) block contains the 6 dimension vector of the object \(j\) detected in the image \(i\). And the factorization of this matrix enables to recover the parametrization of the cameras \(G_{i}\) and the ellipsoids. 
+In practice, <b>the mathematical formulation</b> of SfMO uses standard geometry techniques in the flavour of the tomashi and kanade factorization. The ellipses parameters are stacked in a matrix \(C\) where each \(C_{ij}\) block contains the 6 dimension vector of the object \(j\) detected in the image \(i\). And the factorization of this matrix enables to recover the parametrization of the cameras \(G_{i}\) and the ellipsoids. 
 
 
 <div style="display: flex; justify-content: center;">
@@ -50,7 +50,7 @@ Let's highlight the induced limitations in the case of the narrow baseline betwe
 
 <img class="resize" src="images/low_baseline.png">
 
-<h3>Placing a shape prior on SfMO</h3>
+<h3>My solution : Placing a shape prior on SfMO</h3>
 
 The motivation is to add prior information on the object shape thanks to the statistics collected on the thousands of CAD models of the ShapeNet dataset. An example of such information is that the shape of the bottle has mainly one degree of freedom which is the ratio between its diameter and its hight.  
 
