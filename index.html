@@ -10,6 +10,10 @@
 	<script>
 	
 	var abstracts = {
+  ict4s_2024_title:'<cite>Coca4ai: checking energy behaviors on AI data centers</cite> <br> 2024 ICT4S (ICT for Sustainability)',
+  ict4s_2024_abstract:'<a href=""> pdf to come soon</a>  <br> Monitoring energy behaviors in AI data centers is crucial, both to reduce their energy consumption and to raise awareness among their users which are key actors in the AI field. This paper shows a proof of concept of easy and lightweight monitoring of energy behaviors at the scale of a whole data center, a user or a job submission. Our system uses software wattmeters and we validate our setup with per node accurate external wattmeters. Results show that there is an interesting potential from the efficiency point of view, providing arguments to create user engagement thanks to energy monitoring.',
+  cbmi_2023_title:'<cite>Active Learning with few shot learning for crisis management</cite> <br> 2023 CBMI, (Content Based Multimedia Indexing)',
+  cbmi_2023_abstract:'<a href="https://dl.acm.org/doi/abs/10.1145/3617233.3617278"> pdf</a> <br>Practical applications of machine learning require fast training of models with few annotations on specific domains. Among them, crisis management is of prime importance to support decisions by extracting useful insights from massive datasets. In particular, social media analysis is an intense topic in this domain. In this paper, we investigate whether this problem can be solved by combining an active learning strategy and the few-shot learning paradigm enabled by recent language models. We find that although Few-Shot learning based on K nearest neighbors and greedy Core-set obtain superior performances at a very low data regime, an active learning strategy based on fine-tuning a Distillbert model performs best as more points are observed, still staying in the regime of less than a hundred of points per class. However, the computation burden of the few-shot based method is typically much lower. These findings are obtained through experiments on Twitter data with the CrisisMMD public dataset.',
 	accv_title:'<cite>Visual Graphs from Motion (VGfM): Scene understanding with object geometry reasoning</cite> <br> 2018 ACCV, (Asian Conference on Computer Vision) ',
         accv_abstract:'<a href="https://arxiv.org/pdf/1807.05933.pdf">pdf</a> <a href="https://github.com/paulgay/VGfM">code</a> <br> Recent approaches on visual scene understanding attempt to build a scene graph -- a computational representation of objects and their pairwise relationships. Such rich semantic representation is very appealing, yet difficult to obtain from a single image, especially when considering complex spatial arrangements in the scene. Differently, an image sequence conveys useful information using the multi-view geometric relations arising from camera motion. Indeed, in such cases, object relationships are naturally related to the 3D scene structure. To this end, this paper proposes a system that first computes the geometrical location of objects in a generic scene and then efficiently constructs scene graphs from video by embedding such geometrical reasoning. Such compelling representation is obtained using a new model where geometric and visual features are merged using an RNN framework. We report results on a dataset we created for the task of 3D scene graph generation in multiple views.', 
 	frontiers_title:'<cite> CRF-Based Context Modeling for Person Identification in Broadcast Videos </cite> <br> 2015 Frontiers journal in ICT ',
@@ -62,6 +66,7 @@ function fonction(paper){
         <a href="https://www.linkedin.com/in/paul-gay-8002781b5/">LinkedIn</a>
 	<br>
 	<a href="https://scholar.google.fr/citations?user=TwBT4HEAAAAJ">Google Scholar Profile</a>
+	<a href="https://tree.univ-pau.fr/fr/membres-contractuels-post-doctorants-chercheurs-personnels-d-apppui-a-la-recherche.html">Institutional page</a>
       </div>
     </div>
     <div class="sd_left">
@@ -70,9 +75,9 @@ function fonction(paper){
 	      <br>
 	      <h2>Welcome Visitor! Here are the latest news : </h2>
         <ul>
+        <li>26/6/2024 : <a href="https://conf.researchr.org/home/ict4s-2024">Meet us</a> at the ICT4S conference where I'll present our work on the <a href="https://greenai-uppa.github.io/Coca4AI/"> Coca4AI</a> project where we measure environmental cost of data centers. </li>
         <li>12/01/2024  : Come and see my tutorial on environmental impact at <a href="">https://statapp.site.ined.fr/fr/2024/ia/</a>. 
         <li>Re-watch or discover our  <a href="https://www.youtube.com/watch?v=DT5NJLiMUkw"> IAPau 5</a> conference on Generative IA!
-        <li>5/6/2023 : <a href="https://gsha2023.sciencesconf.org/">Join us</a> at the Green Software and Human Actors Workshop where I'll present our work on the <a href="https://greenai-uppa.github.io/Coca4AI/"> Coca4AI</a> project where we measure environmental cost of data centers. </li>
         <li>Check our <a href="https://greenai-uppa.github.io/AIPowerMeter/">AIPowerMeter</a> software: Yet another toolbox to measure the energy consumption of your AI.
         <li>Small video for a flavour of our <a href="https://www.youtube.com/watch?v=IedJytgIFE0"> Social Computing Work</a> in collaboration with the <a href="tree.univ-pau.fr/">Tree lab</a> (in french).
 				<ul>
@@ -101,7 +106,17 @@ function fonction(paper){
         </ul>
         <br>
 
-        <h2>Publications <a style="color:black;font: 0.65em Arial, sans-serif">(click on titles for abstracts, download links and code)</a> <a name="publi"> </a> </h2>
+        <h2>Selected Publications <a style="color:black;font: 0.65em Arial, sans-serif">(click on titles for abstracts, download links and code)</a> <a name="publi"> </a> </h2>
+        <h3>2023-currently : GreenAI and AI4Green (social computing)</h3>
+        <a onmouseover="this.style.cursor='pointer'" conf="ict4s_2024" value="title" onclick="fonction(this)">
+        <cite>Coca4ai: checking energy behaviors on AI data centers</cite> <br> 2024 ICT4S (ICT for Sustainability)</a>
+        <br>
+        <br>
+        <a onmouseover="this.style.cursor='pointer'" conf="cbmi_2023" value="title" onclick="fonction(this)">
+        <cite>Active Learning with few shot learning for crisis management</cite> <br>
+        2023 CBMI, (Content Based Multimedia Indexing)
+        </a>
+        <h3>2019 - 2022 Working on a Start-up ... </h3>
         <h3>2016-2018: 3D visual scene understanding </h3>
         <a onmouseover="this.style.cursor='pointer'" conf="accv" value="title" onclick="fonction(this)">
 	<cite>Visual Graphs from Motion (VGfM): Scene understanding with object geometry reasoning</cite> <br>
@@ -122,12 +137,6 @@ function fonction(paper){
 
         <h3 >2014-2011: audio-visual people indexing in broadcast news</h3>
         Phd thesis (in french): <a href="these_paul_gay.pdf">Audiovisual segmentation and identification of persons in broadcast news.</a>
-        <br>
-        <br>
-        <a onmouseover="this.style.cursor='pointer'" conf="frontiers" value="title" onclick="fonction(this)"> 
-        <cite> CRF-Based Context Modeling for Person Identification in Broadcast Videos </cite> <br> 
-        2015 Frontiers journal in ICT
-        </a>
 
         <br>
         <br>        
