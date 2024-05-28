@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Sujet du jour : Que peut-on faire avec l'IA aujourd'hui ?</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/sky.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+	
+		/* Create two equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 10px;
+		}
+	
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+	  </style>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+<section>
+	Sujet du jour
+	<h2>Que peut-on faire avec l'IA aujourd'hui ?</h2>
+</section>
+
+
+<section>
+	<h2>Qui sommes-nous ?</h2>
+
+<p>L'Association IA PAU rassemble dans la bonne humeur chercheurs, enseignants, étudiants et entrepreneurs autour de projets collaboratifs.</p>
+
+<img src="images/face.jpg", width="122"> <img src="images/yannick.png", width="110">
+
+<ul>
+	<li>Paul Gay - Ingénieur de recherche - CNRS-UPPA</li>
+	<li>Yannick LeNir - Enseignant Chercheur - Cy-tech</li>
+</ul>
+
+</section>
+
+
+<section>
+	<h3>Sondage</h3>
+	 Quel sujet préférez-vous ?
+	<ul>
+		<li> 1 : Ouvrir le capot et inspecter le moteur de l'IA</li>
+		<li>2 : Quand utiliser une IA et combien ça coûte ?</li>
+		<li>3 : Conséquences sociétales, environnemental et aspect législatif</li>
+	</ul>
+
+</section>
+
+	<section id="fragments">
+		<h2> L'IA c'est quoi ? </h2>
+
+
+<ul>
+	<li>Ce n'est pas très bien défini</li>
+	<li>Écriture de règles</li>
+	<li>Aptitude à apprendre sans programmation explicite</li>
+	<li>Extraire des connaissances à partir de données</li>
+	<li>L'IA (forte), ça n'existe pas</li>
+</ul>
+<div class="fragment">
+	<p>Une définition :</p>
+Transformer des données (des chiffres) jusqu'à un résultat utile (K. Smaili)
+</div>
+</section>
+
+<section id="fragments">
+			<h3> 	Pourquoi maintenant ? </h3>
+	Alan Turing : <i>what we want is a machine that learns from experience</i>
+<br>
+<img src="images/histoire.png", width="700">
+<br>
+<br>
+<br>
+<div class="fragment">
+	Accélération depuis 2010:
+<br>
+<ul>
+	<li>Plus de données et de puissance de calcul (GPU)</li>
+	<li>Plus d'outils (open source)</li>
+</ul>
+</div>
+</section>
+
+<section class="fragment">
+	<h3>Que sait faire l'IA ?</h3>
+	Transformer des données (des chiffres) jusqu'à un résultat utile
+	 <br>
+	 <img src="images/desias.png", width="700">
+	 <br>
+	 <br>
+	 <br>
+<p class="fragment">Par domaine : administration, relation client, média, médecine, cinéma, maintenance, robotique, finance,...</p>
+<p class="fragment">Par tâche : classer, recommender, détecter, prédire, générer, résumer</p>
+</section>
+
+<section>
+	Des données  <=> des chiffres
+<br>
+<br>
+<br>
+<img src="images/donnees_numeriques1.png", width="700">
+<br>
+</section>
+
+<section>
+	Des données <=> des chiffres
+	<br>
+	<br>
+	<br>
+	<img src="images/donnees_numeriques2.png", width="900">
+	<br>
+</section>
+
+<section id="fragments">
+	
+	 <br>
+	 <img src="images/unsuper.png", width="700">
+	 <br>
+	 <p class="fragment">Comment transformer des données jusqu'à un résultat utile ?</p>
+</section>
+
+<section id="fragments">
+	<p>Comment formuler une tâche ? </p>
+	 <img src="images/chien_chat.png", width="700">
+	 <br>
+	 Par ex: différencier les chiens et les chats ?
+	 <br>
+	 <div class="fragment">
+		<div class="row">
+			<div class="column">
+				<br>
+				<br>
+				Apprendre l'IA sur une base d'apprentissage construite par un humain
+			</div>
+			<div class="column">
+				<img src="images/chien_chat_train.png", width="400">
+			</div>
+		</div>			
+	</div>
+</section>
+
+<section>
+	<p>Comment apprendre une tâche ? </p>
+	 <img src="images/chien_chat_class_train0.png", width="700">
+	 <br>
+	 <ul>
+		<li>Construire un modèle qui calcule (mal) deux chiffres</li>
+	</ul>
+</section>
+
+<section>
+	<p>Comment apprendre une tâche ? </p>
+	 <img src="images/chien_chat_class_train1.png", width="700">
+	 <br>
+	 <ul>
+		<li>Construire un modèle qui calcule (mal) deux chiffres</li>
+		<li>Comparer ce calcul à la vérité annotée</li>
+	</ul>
+</section>
+
+<section>
+	<p>Comment apprendre une tâche ? </p>
+	 <img src="images/chien_chat_class_train2.png", width="700">
+	 <br>
+	 <ul>
+		<li>Construire un modèle qui calcule (mal) deux chiffres</li>
+		<li>Comparer ce calcul à la vérité annotée</li>
+		<li>Construire <b>un objectif</b> pour la machine</li>
+	</ul>
+</section>
+
+<section id="fragments">
+	<p>Comment apprendre une tâche ? </p>
+	 <img src="images/chien_chat_class_train3.png", width="700">
+	 <br>
+	 <ul>
+		<li>Construire un modèle qui calcule (mal) deux chiffres</li>
+		<li>Comparer ce calcul à la vérité annotée</li>
+		<li>Construire un objectif pour la machine</li>
+		<li>Optimiser légérement la boite noire pour rapprocher le résultat de l'annotation</li>
+	</ul>
+	<p class="fragment">Des milliards de petites modifications rapprochent le résultat de l'annotation humaine</p>	
+</section>
+
+<section id="fragments">
+	<h3>Comment générer des mots ?</h3>
+	 <br>
+	 <img src="images/generation_mot.png", width="700">
+	 <br>
+	 Calculer un score pour chaque mot du dictionnaire
+	 <p class="fragment">et afficher un mot probable</p>
+</section>
+
+<section id="fragments">
+	Les GPT sont optimisés pour prédire des mot manquants
+	
+	<p>Antoine XXXXX est un footballeur</p>
+	
+	<p class="fragment">Sur l'ensemble d'internet, avec (peut-être) 384 GPUs pendant 3.5 mois</p>
+	<p class="fragment">Et une correction manuelle pour construire l'agent conversationnel ChatGPT</p>
+
+</section>
+
+<section id="fragments">
+	Quelle IA pour quel problème ? 
+	<br>
+	<br>
+	<div class="fragment">
+
+	<b>Problème simple : c.a.d. </b>
+	<ul>
+		<li>Données structurées ou formatées</li>
+		<li>Problème résumable par les données disponibles</li>
+		<ul>
+			<li>Exemple texte : classer des documents par langue</li>
+			<li>Exemple image : détection de mouvement</li>
+		</div>
+			<ul class="fragment">
+				<li>IA légère <= 10Mo</li>
+				<li>Quelques jours d'implémentation sur un portable</li>
+			</ul>
+		</ul>
+	</ul>
+
+	</section>
+	
+	<section>
+	<b>Problème connu : </b>
+	<ul>
+		<li>Modèles pré-entraînés existant pour votre tâche</li>
+		<li>Transcription => Whisper </li>
+		<li>Détection d'objets courants => Yolo </li>
+		<li>Génération de texte => on connait :) </li>
+		<ul class="fragment">
+			<li>Quelques jours d'implémentation sur un portable ou GPUs</li>
+			<li>GPUs entre 3000 et 20000 euros</li>
+		</ul>		
+	</ul>
+	</section>
+	
+	<section>
+	<b>Problème non résolu et difficile : </b>
+	<ul>
+		<li>Traduction vers une langue peu dotée, compréhension fine de documents métiers</li>
+		<div class="fragment">
+		<li>Adaptation d'un gros modèle : sur cloud ou GPUs</li>
+		<li>Préparer des données : coûts en temps ingénieur</li>
+		<li>Entre quelques jours et quelques mois ou années ?</li>
+		</div>
+	</ul>
+	</section>
+	
+
+	
+
+<section>
+	Les limites fondamentales : encore aujourd'hui
+<ul>
+	<li>Cas de la génération</li>
+	<ul class="fragment">
+		<li>Taille du contexte</li>
+		<li>Absence de source </li>
+		<li>Hallucinations</li>
+		<li>Dépendance cloud ou GPUs et matériel important + savoir faire technique</li>
+		<li>Prompt Engineering (art, habitude, savoir-faire, apprendre le comportement d'une machine ? )</li>
+	</ul>
+	<li class="fragment"><b>Biais</b> difficulté d'imposer une contrainte</li>
+	<li class="fragment"> Mauvaise estimation de la confiance du résultat</li>
+	<li class="fragment">Interprétabilité</li>
+</ul>
+</section>
+
+
+<section>
+        <h3> Impact Sociétal</h3>
+		<img src="images/banlieue.png", width="900">
+
+</br>
+Nous avons vu que ces modèles comportent des biais contenus dans les données
+<br>
+<ul>
+	<li>Les chiens dans la neige sont des loups</li>
+	<li>"Banlieue" est un mot mal connoté</li>
+</ul>
+</section>
+
+<section>
+	<h3>Impact environnemental</h3>
+	<img src="images/size_growth.png", width="700">
+</br>
+<ul>
+	<li>Impact carbone du numérique ~= domaine de l'aviation</li>
+	<li>Des milliards d'appareils connectées</li>
+		<li>Énergie, ressources minières, éco-toxicité et empreinte en eau</li>
+		<li>Et des effets rebonds...</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Aspect législatif</h3>
+	IA Act : Entrée en vigueur de 2025 à 2027
+	<ul>
+		<li class="fragment"><b>IA prohibées</b> : Notation sociales, police prédictive, manipulation du comportement humain</li>
+		<li class="fragment"><b>IA à haut risque</b> : éducation, accès aux services publics, migration</li>
+		<li class="fragment"><b>IA à risque modérée</b> : Obligations de transparence : Chatbot, deepfake,...</li>
+	</ul>
+	<p class="fragment">Mauvaise Interprétabilité => Difficile d'exercer le droit</p>
+</section>
+
+<section>
+<h3>Conclusion : c'est en général correct </h3>
+<ul>
+	<li>Assistant et Expertise </li>
+	<li>Recommendation</li>
+	<li>Pré-Traiter le gros du travail (des données) avant une vérification par un humain</li>
+</ul>
+</section>
+
+<section>
+        <h2> L'IA à Pau </h2>
+Développons la communauté dans notre territoire !
+</br>
+</br>
+<ul>
+
+	<li>Conférences thématiques</li>
+	<ul>
+		<li>IA & Société, Santé, Informatique Quantique</li>
+	</ul>
+	<li>Data challenges</li>
+	<ul>
+		<li>150 étudiants de toute la France le temps d'un Hackaton</li>
+	</ul>
+</ul>
+</section>
+
+
+<section>
+        <h2> That's all folks</h2>
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1260,// largeur du texte
+				height: 700,
+     		margin: 0.04,// don't know what that is
+				minScale: 0.1, // more or less global font size
+				maxScale: 1.0, // more or less global font size
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
+
