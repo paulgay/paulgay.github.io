@@ -1,0 +1,868 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Sujet du jour : Que peut-on faire avec l'IA aujourd'hui ?</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/sky.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+	
+		/* Create two equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 10px;
+		}
+	
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+	  </style>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+<section>
+	Sujet du jour
+	<h3>C'est quoi l'IA ? C'est bien ou c'est mal ?</h3>
+	Paul Gay - Alexis Touza - IA Pau
+</section>
+
+
+<section>
+	<h2>Qui sommes-nous ?</h2>
+<img src="images/logo_iapau.png", width="600">
+</br>
+<font color="blue">http://iapau.org</font>
+
+<p>L'Association IA PAU rassemble dans la bonne humeur chercheurs, enseignants, étudiants et entrepreneurs pour explorer notre rapport à l'IA.</p>
+
+<ul>
+	<li><b>Début décembre</b> : Conférences grands publics : IA & éducation, travail, environnement</li>
+	<li>After works plus techniques</li>
+	<li>Compétition étudiante</li>
+</ul>
+
+</section>
+
+<section>
+	<h2> Définition de l'ia </h2>
+
+
+
+<ul>
+	<li>Ce n'est pas très bien défini</li>
+	<li>Écriture de règles</li>
+	<li>Aptitude à apprendre sans programmation explicite</li>
+	<li>Extraire des connaissances à partir de données</li>
+	<li>L'IA (forte), ça n'existe pas</li>
+</ul>
+<p>Une définition :</p>
+Transformer des données en chiffres, qui sont manipulés jusqu'à un résultat utile pour une application réelle. (K. Smaili)
+</section>
+
+<section id="fragments">
+			<h3> 	Pourquoi maintenant ? </h3>
+	Alan Turing : <i>what we want is a machine that learns from experience</i>
+<br>
+<img src="images/histoire.png", width="1300">
+<br>
+<div class="fragment">
+<p>Les algorithmes précédent les applications</p>
+</div>
+<div class="fragment">
+	Accélération de l'IA depuis 2010:
+<br>
+<ul>
+	<li>Plus de données et de puissance de calcul</li>
+	<li>Plus d'outils (open source)</li>
+</ul>
+</div>
+</section>
+
+<section>
+	<h3>Que sait faire l'IA ?</h3>
+	 Une machine à calculer sur des données numériques
+	 <br>
+	 <img src="images/desias.png", width="1300">
+	 <br>
+<p>Applications des IA faibles: administration, relation client, média, médecine, cinéma, maintenance, robotique, finance,...</p>
+</section>
+
+<section data-markdown id="fragments">
+	<textarea data-template>		
+
+Méthodes à base de <font color="blue">connaissances</font>
+</br>
+_versus_ 
+</br>
+ méthodes à base de <font color="blue">données</font>
+
+<div class="fragment">
+
+#### Systèmes experts et méthodes <font color="blue">à base de règles</font> 
+
+- Prouvables, explicables, fiables
+
+- :( Règles parfois difficile à formaliser et à définir
+
+</div>
+
+<div class="fragment">
+
+#### <font color="blue">Méthodes statistiques</font> à base de données 
+
+- __souvent correctes__
+
+- Meilleure capacité de généralisation 
+
+- Facilité de seulement _fournir des données_ à l'algorithme
+
+- :( Processus opaques!
+
+</div>
+
+</textarea>
+</section>
+
+<section>
+Une machine à calculer sur des données numériques
+<br>
+<img src="images/donnees_numeriques.png", width="1400">
+<br>
+</section>
+
+<section>
+	Une machine à calculer sur des données numériques
+	<br>
+	<img src="images/donnees_numeriques1.png", width="1400">
+	<br>
+</section>
+
+<section>
+	Une machine à calculer sur des données numériques
+	<br>
+	<img src="images/donnees_numeriques2.png", width="1400">
+	<br>
+</section>
+
+<section >
+	
+	Une machine à calculer sur des données numériques
+	 <br>
+	 <img src="images/boite_noire.png", width="1400">
+	 <br>
+	 <p>Comment apprendre une IA pour un problème précis <font color="blue">à partir de données</font> ?</p>
+</section>
+
+<section data-markdown id="fragments">
+	<textarea data-template>		
+
+##### Exemple avec un (médiocre) docteur assistant 
+<img src="images/perceptron.png" width="1400">
+
+<div class="fragment">
+	Apprendre revient à  : 
+<p><font color="blue">Optimiser</font> les paramètres (a,b,c) tels que <font color="blue">les données observées</font> soient bien classées 
+</p>
+
+</div>
+	
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>		
+
+##### Apprendre le (médiocre) docteur assistant 
+
+Illustration de l'<font color="blue">optimisation</font> les paramètres (a,b,c) itérativement.
+
+<img src="images/apprentissage.png" width="1600">
+
+</textarea>
+</section>
+
+
+<section id="fragments">
+	<p>Comment formuler une tâche ? </p>
+	 <img src="images/chien_chat.png", width="1400">
+	 <br>
+	 Par ex: différencier les chiens et les chats ?
+	 <br>
+	 <div class="fragment">
+		<div class="row">
+			<div class="column">
+				<br>
+				<br>
+				Apprendre l'IA sur une base d'apprentissage construite par un humain
+			</div>
+			<div class="column">
+				<img src="images/chien_chat_train.png", width="800">
+			</div>
+		</div>			
+	</div>
+</section>
+
+<section>
+	<p>Comment apprendre une tâche ? </p>
+	 <img src="images/chien_chat_class_train0.png", width="1300">
+	 <br>
+	 <ul>
+		<li>Construire un modèle qui calcule (mal) deux chiffres</li>
+	</ul>
+</section>
+
+<section>
+	<p>Comment apprendre une tâche ? </p>
+	 <img src="images/chien_chat_class_train1.png", width="1300">
+	 <br>
+	 <ul>
+		<li>Construire un modèle qui calcule (mal) deux chiffres</li>
+		<li>Comparer ce calcul à la vérité annotée</li>
+	</ul>
+</section>
+
+<section>
+	<p>Comment apprendre une tâche ? </p>
+	 <img src="images/chien_chat_class_train2.png", width="1300">
+	 <br>
+	 <ul>
+		<li>Construire un modèle qui calcule (mal) deux chiffres</li>
+		<li>Comparer ce calcul à la vérité annotée</li>
+		<li>Construire <b>un objectif</b> pour la machine</li>
+	</ul>
+</section>
+
+<section id="fragments">
+	<p>Comment apprendre une tâche ? </p>
+	 <img src="images/chien_chat_class_train3.png", width="1300">
+	 <br>
+	 <ul>
+		<li>Construire un modèle qui calcule (mal) deux chiffres</li>
+		<li>Comparer ce calcul à la vérité annotée</li>
+		<li>Construire un objectif pour la machine</li>
+		<li>Changer légérement les opérations pour que le résultat s'approche de cette annotation</li>
+	</ul>
+	<p class="fragment">Comment apprendre à partir d'expériences ?</p>
+	<p class="fragment">des milliards de petites modifications pour s'approcher de la vérité (sur les données d'apprentissage)</p>	
+</section>
+
+<section>
+	<h3>Comment faire de la détection ?</h3>
+	 <br>
+	 <img src="images/detection.png", width="1300"> 
+	 <br>
+	 Quels chiffres doit calculer l'IA pour classer chien/chat ET prédire la position de l'animal ?
+</section>
+
+<section>
+	<h3>Comment faire de la détection ?</h3>
+	 <img src="images/detection2.png", width="1300">
+	 <br>
+	 Quels chiffres doit calculer l'IA pour classer chien/chat ET prédire la position de l'animal ?
+<br>
+<br>
+6 chiffres : hauteur, largeur, x, y, score du chat, score du chien
+</section>
+
+
+<section id="fragments">
+	<h3>Comment générer des mots ?</h3>
+	 <br>
+	 <img src="images/generation_mot.png", width="1300">
+	 <br>
+	 Calculer un score pour chaque mot du dictionnaire
+</section>
+
+
+<section>
+	Depuis 2020, l'auto-supervision prend de l'essor pour apprendre sur plus de données.
+	<br>
+	<br>
+	
+<ul>
+	<li>Abimer les données automatiquement</li>
+
+	<li>Et entraîner une IA pour réparer</li>
+</ul>
+<br>
+<br>
+<div class="fragment">
+	<div class="row">
+		<div class="column">
+Prédiction du mot manquant
+			<ul>
+				<li>... est un footballeur </li>
+			
+				<li>Antoine ... un footballeur</li>
+			</ul>
+		</div>
+		Prédiction de pixels manquants
+		<div class="column">
+			<img src="images/auto_supervision.png", width="800">
+		</div>
+	</div>			
+</div>
+
+</section>
+<section id="fragments">
+	<h3>Et ChatGPT ?</h3>
+	<p class="fragment">Entraînement d'un modèle de langage
+	<img src="images/chatgpt_train.png", width="2200", alt="Italian Trulli">
+	</p>
+	<p class="fragment">Sur l'ensemble d'internet, avec (peut-être) 384 GPUs pendant 3.5 mois</p>
+	<p class="fragment">Et une correction manuelle pour construire l'agent conversationnel ChatGPT</p>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+Est-ce que c'est bien ou mal d'utiliser l'IA ?
+
+	</textarea>
+</section>
+
+
+<section>
+	<h3>Automatisation des tâches</h3>
+	<ul>
+		<li>De nouveaux outils offrant un gain de compétitivité</li>
+		<li>Un assistant pour un regard extérieur sur son travail</li>
+		<li>Outils d'aide à la décision (médecine, finance, stratégie)</li>
+	</ul>
+</section>
+
+<section>
+	<h2>chatGPT <a href="https://openai.com/blog/chatgpt/">limitations</a></h2>  
+	<div class="left">
+		Difficile d'éviter que <font color="blue">certains textes n'ont aucun sens </font>
+		<ul>
+			<li>La vérité n'est pas prise en compte pendant l'entraînement</li>
+		</ul>
+
+	</br>
+</br>
+		La même question peut donner des réponses différentes 
+		
+	</br>
+		<ul>
+			<li><font color="blue">Sensible à de légères variations</font></li>
+		</ul>
+
+	</br>
+	<br>
+		Problème des biais et des contenus toxiques encore existants.
+		
+	</br>
+	<ul>
+			<li>Ligne éditoriale de ChatGPT ? (plutôt américaine)</li>
+		</ul>
+
+		<br>
+	</br>
+</br>
+<font color="red">Ne pas fournir de données à ChatGPT !!</font>
+	</div>
+</section>
+
+
+<section>
+<h3> Des biais dans les IAs</h3>
+<img src="images/banlieue.png", width="1600">
+</br>
+Nous avons vu que ces modèles comportent des biais contenus dans les données
+<br>
+<ul>
+	<li>Les chiens dans la neige sont des loups</li>
+	<li>"Banlieue" est un mot mal connoté</li>
+</ul>
+</section>
+
+
+<section data-markdown>
+	<textarea data-template>
+	<h3> IA Act, Réglementation Européenne</h3>
+	<img src="images/iaact.png", width="1400">
+	
+	</br>
+	4 niveaux de risques encadrant les IA (CNIL)
+</textarea>
+</section>
+
+
+<section data-markdown>
+	<textarea data-template>
+
+_Peut-on éviter l'IA, comment se protéger si  ?_ Céline Teyssier, enseignante-chercheure — UPPA
+
+- Dans le droit du travail : l'évaluation par l'IA est encadrée : interdiction de détecter des émotions primaires.
+
+- Interdiction d'utiliser des données sensibles : qui peuvent être discriminantes.
+
+</textarea>
+</section>
+
+
+
+<section data-markdown>
+	<textarea data-template>
+
+_Comment en tant que graphiste ne pas se faire remplacer par l'IA ?_ Céline Teyssier, enseignante-chercheure — UPPA
+
+Si on prend l'exemple de la machine à écrire et de l'ordinateur, il faut que le travailleur s'adapte.
+
+Les modifications de la tâche s'imposent au travailleur, les modifications de poste sont protégés par le droit. 
+
+Un cadre juridique qui existe, des jurisprudences à venir 
+</textarea>
+</section>
+
+
+
+<section data-markdown>
+	<textarea data-template>
+
+_Quid de la propriété intellectuelle ?_ Par Nicolas Girardin
+
+>>> Il est certain que les nouveaux modèles génératifs posent des challenges forts sur les droits de propriété intellectuelle. 
+Il y a les questions suivantes : 
+- Est ce qu'il est possible d'entrainer des modèles avec des oeuvres protégées par des droits d'auteur ?  
+
+dans de nombreux pays cela sera interdit
+
+- Est ce que les générations enfreingnent les droits des auteurs quand  nous avons un dessin qui copie quasi à l'identique le style de  Studio Ghibli ? 
+
+dans de nombreux pays cela sera interdit
+
+- Est ce que ce que nous générons via IA est protégé à notre bénéfice par le droit d'auteur ? 
+
+contrairement à mes positions il est probable que non
+
+- Côté sorties, le « style » (ex. Studio Ghibli) n’est pas protégé "en tant que tel" 
+
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+Impact environnemental de l'IA ?
+
+
+Et un atout pour la résilience environnementale ?
+
+	</textarea>
+</section>
+
+<section>
+	<h3>Impact environnemental</h3>
+	<img src="images/size_growth.png", width="1400">
+</br>
+<ul>
+	<li>Impact carbone du numérique ~= domaine de l'aviation</li>
+	<li>Des milliards d'appareils connectées</li>
+		<li>Énergie, ressources minières, éco-toxicité et empreinte en eau</li>
+		<li>Et des effets rebonds...</li>
+	</ul>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+Qui ne connait pas cette figure ? 
+
+<img src="images/PB_2022_green_water.png" style="width: 1260px;" >
+
+</textarea>
+</section>
+
+
+
+<section data-markdown>
+	<textarea data-template>
+
+### Résumé de la figure précédente
+
+- 1) Ne pas se focaliser que sur un seul aspect (carbone, eau, social)
+
+- 2) La transition n’est pas résolvable par des sous-problèmes indépendants
+
+- 3) Globalement, certaines choses vont décroitre, par choix ou par contrainte.
+    - résilience => Choix simples, peu énergivores et souverains
+
+- 4) Résilience, souveraineté et réduction d’impact se rejoignent
+	- => innover avec une IA simple, frugale, souveraine pour des usages pertinents
+
+- 5) L’agriculture est un domaine à enjeux
+
+</textarea>
+</section>
+
+<section data-markdown id="fragments">
+	<textarea data-template>
+
+
+**Qui ne connait pas <font color="blue">l'effet rebond</font>, ou paradoxe de <font color="blue">Jevons</font> ?**
+
+<div class="fragment"></br> 
+</br> 
+
+**Alors voici un exemple** : Trop de mails à gérer... 
+
+- 1) On utilise ChatGPT pour résumer et envoyer nos mails
+
+- 2) On peut donc envoyer plus de mails
+
+Résultat : Trop de mails à gérer
+
+</div>
+
+
+<div class="fragment"></br> 
+
+Même ambiguité pour les smart grids, les smart homes, le télétravail et le covoiturage [1]
+
+<div style="text-align: left"> <sub><sub>	[1] Quelle contribution du numérique à la décarbonation? A Faure, G Roussilhe La note d'analyse de France Stratégie 141</sub></sub> </div> 
+</div>
+
+	</textarea>
+</section>
+
+
+
+<section data-markdown>
+	<textarea data-template>
+
+### Quelques grandes leçons 
+		
+<img src="images/greenit.png" style="width: 860px;" >
+
+
+- Impacts en termes d'énergie, de $CO\_2$, d'eau, et de métaux.
+
+- Car ce sont des machines complexes à construire
+
+	- Faire durer notre équipement, avoir moins d'écran 
+
+- Recyclage encore difficile en 2024 
+
+- Plus d'IA => plus de consommation éléctrique et d'eau.
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+### Difficulté d'avoir une IA souveraine
+		
+
+- Une IA sur des machines produites hors d'Europe
+
+- Construite avec des matériaux produits hors d'Europe
+
+- Sur des modèles et logiciels produits hors d'Europe
+
+
+</textarea>
+</section>
+
+
+<section data-markdown>
+	<textarea data-template>
+#### Quelques chiffres Green IT pour finir
+
+L’institut GreenIT nous fournit quelques chiffres pour un an de numérique au bureau
+
+ - Ressources “matières” :  92 tonnes de terre excavée.
+
+ - Ressources fossiles : 2000 radiateurs pendant un an
+
+ - Réchauffement : 431 kg équivalent CO2, soit 2500 km en voiture 
+           !!! notre budget compatible c’est environ 2 tonnes.
+
+ - Eau douce : 356 m3, soit 5 940 douches.
+
+ <div style="text-align: left"> <sub><sub>https://www.greenit.fr/2024/09/23/numerique-au-bureau-jusqua-60-de-notre-budget-annuel-soutenable/</sub></sub> </div>
+	</textarea>
+</section>
+
+
+<section data-markdown>
+	<textarea data-template>
+#### Et quelques chiffres sur l’IA de plus
+<div class="fragment">
+
+- Une conversation ChatGPT
+
+	- Une bouteille d’eau [1]
+
+	- 2g de CO2 [2] (C’est tout !?)*
+</div>
+<div class="fragment">
+
+- Un Entraînement de GPT3 : 1287 MWh, 552 tonnes de CO2
+
+- Les GAFAMS s’intéressent au nucléaire pour couvrir leurs usages
+
+</div>
+<div class="fragment">
+
+- l’IA consommera en 2027 85–134 TWh  (le quart de la France en 2023) [4]
+
+</div>
+
+</br>
+
+<div class="fragment">
+
+- Des IAs inégales : La génération d’images a une consommation de 20 fois celle de la génération de texte qui elle même est 10 fois celle de la classification de texte [5].
+
+</div>
+
+
+<div style="text-align: left"> <sub><sub>* Seulement si vous débranchez votre ordinateur et arrêtez de travailler pendant 20 min. (le temps que vous avez gagné), sinon effet rebond !!</sub></sub> </div> 
+		
+<div style="text-align: left"> <sub><sub>* Seulement si vous débranchez votre ordinateur et arrêtez de travailler pendant 20 min. (le temps que vous avez gagné), sinon effet rebond !!</sub></sub> </div> 
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+Est-ce que c'est bien ou mal d'utiliser l'IA ?
+
+**L'IA n'est ni bonne, ni mauvaise, ni neutre.**
+
+Pour approfondir sur l'histoire des sciences et des techniques : Guillaume Carnino
+
+</textarea>
+</section>
+
+
+
+
+<section>
+        <h2> L'IA à Pau </h2>
+Développons la communauté dans notre territoire !
+</br>
+</br>
+<ul>
+
+	<li>Conférences thématiques</li>
+	<ul>
+		<li>IA & Société, Santé, Informatique Quantique</li>
+	</ul>
+	<li>Data challenges</li>
+	<ul>
+		<li>150 étudiants de toute la France le temps d'un Hackaton</li>
+	</ul>
+</ul>
+</section>
+
+
+<section>
+<h2> That's all folks</h2>
+
+<div style="text-align: left"> <sub><sub>[1] Li et al. Making AI Less “Thirsty”: Uncovering and Addressing the Secret Water Footprint of AI Models, 2023</sub></sub> </div> 
+<div style="text-align: left"> <sub><sub>[2] Tomlinson et al. The carbon emissions of writing and illustrating are lower for AI than for humans. Nature 2024</sub></sub> </div> 
+<div style="text-align: left"> <sub><sub>[3] Patterson et al. Carbon emissions and large neural network training. 2021</sub></sub> </div> 
+<div style="text-align: left"> <sub><sub>[4] De Vries The growing energy footprint of artificial intelligence. Joule 2O23	</sub></sub> </div> 
+<div style="text-align: left"> <sub><sub>[5] power hungry processing : wats driving the cost of ai deployment. 2024</sub></sub> </div> 
+
+		
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 1860,// largeur du texte
+				height: 1300,
+     		margin: 0.04,// don't know what that is
+				minScale: 0.1, // more or less global font size
+				maxScale: 1.0, // more or less global font size
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
+
+<section>
+Note de https://www.youtube.com/watch?v=Rh_1feg8BoA
+
+Philippe Aghion économiste de la croissance . 
+	Destruction créatrice : l'innovation retire le passé. Laptop et machine à écrire
+	Innovation moteur de la création, qui existe parcque les entrepreuneurs investissent
+	Et les innovateurs d'hier veulent stopper l'innovation pour rester en tête
+
+	croissance infinie et capital infinie grâce à l'IA
+
+	et peut-être évidemment la croissance verte
+
+Encadrement Juridique 
+	Quels encadrements juridiques
+
+	- déterminer le droit applicable
+	- l'ensemble normatif
+	- cadre juridique général est-il suffisant
+
+
+</section>
+<section>
+        <h2>Humain versus IA</h2>
+On va essayer de fonctionner par analogie avec ce qu'on connait, fonctionnons par analogie avec l'intelligence humaine.
+				Les sens
+
+				Comment les ordinateurs perçoient le monde?
+
+Ils voient des pixels, qui sont des 1 et 0
+
+Ils écoutent des fichiers audio, mp3, qui sont 1 et des 0
+
+Montrer deux fréquences de sons
+
+Ils lisent du texte
+
+Ils lisent à une cadence beaucoup plus élevé, ils digèrent très vite un grand ensemble de données
+
+ok google
+
+Et il se répètent sans se tromper, les machines en général, peuvent effectuer rapidement et des millions de fois une tâche sans se fatiguer ou sans dormir.
+
+</section>
+
+<section>
+        <h2> Le gros point faible</h2>
+
+ Il lui faut un environnement relativement prévisible
+
+Manque de généralisation
+
+On sait quand même beaucoup de choses,
+
+On baigne dans le monde physique, on interragit constamment avec lui
+
+L'évolution nous a donné un cerveau qui permet d'avoir un algorithme d'apprentissage, efficace, commun, et l'envie de nous en servir
+
+Et nous le comprenons très mal, les machines que nous avons
+
+on lutte contre ce problème, et on a beaucoup de mal à le faire.
+
+</section>
+
+
+Voici le panel de question : 
+- Dans quels domaines l'IA va-t-elle le plus changer nos vies (d'ici 3 à 5 ans) ?
+- Quelles tâches quotidiennes pourront-être remplacée par des IA ?
+- En quoi l'IA pourrait faire progresser la médecine ? (pour le public, pour les médecins, pour les chercheurs, pour les hôpitaux)
+- Quels emplois sont directement menacés par l'arrivée de l'IA ?
+- Quels emplois vont-ils naître avec l'IA ? 
+- Avec GPT, les lettres de motivation ou CV pourront être créés de manière artificielle, pensez-vous que les entreprises vont changer leur manière d'embaucher ?
+- Au niveau de l'éducation, on voit déjà certains élèves de collège/lycée tricher en utilisant l'IA, comment les établissements scolaires vont-ils s'adapter ? 
+- Est-ce que l'IA pourrait avoir un rôle de facilitateur (Midjourney pour représenter scènes historiques par ex)
+- Comment les professeurs peuvent tirer profit de l'IA ?
+- Dans l'art, il y a beaucoup d'inquiétude avec l'arrivée des IA qui pourrait révolutionner la fabrique d'image, la création de scénarios ou autre, est-ce que les métiers d'art sont réellement menacés ?
+- D'un point de vue des relations sociales, est-ce qu'une IA pourrait devenir notre ami (comme avec l'appli Replica) ?
+- Quelle est la marge de progression de l'IA ?
+- Quelles sont ses limites ?
+- Quels questionnement ce changement technologique va-t-il amener ? 
+
+
+
+
+Chambre chinoise est pas mal pour décrire l'illusion de la conscience
+
+Il n'y a pas une IA, donc on ne peut pas généraliser, c'est par domaine et par technique, et malheureusement, ce n'est pas complétement calé
+
+François Héli, philosophique,cmélanie arntz
+	le pouvoir conformatif, tu vas plutôt être d'accord avec l'IA 
+
+IA acte, 4 niveaux
+
+Chat GPT, pas sourcé, ce qu'il y a sur internet, hallucination
+
+vivre immergé dans le réel Sentir voir versus 0 et 1 
+ et puissance de généralisation versus des millions de fois sans se fatiguer
+
+	L'IA c'est un calcul, pas une décision 
+	Ghost work, stochastic parrot
+
+	Bon : tâches répétitives, pour lesquels des motifs qui se répétent permettent de déduire des règles qui résolvent la tâche
+
+	limite grasping 
+		travail manuel dans des environnement non controlé peu impacté 
+	limite grounding, concept 
+		relations humaines peu impactés 
+
+
+
+
+To watch : https://www.arte.tv/en/videos/108338-001-A/agree-to-disagree/
+
+https://job-futuromat.iab.de/en/#top
+
+jamais la technique ne remplacera l'homme, personne n'est compris comment fonctionne le cerveau
+
+
+<section>
+	<h2>Automatisation des emplois</h2>
+			<img src="images/job_automation.png", width="800", alt="Italian Trulli">
+			<p>Credits : Anis AYARI</p>
+			<p>https://job-futuromat.iab.de</p>
+
+<p>"augmentation" plus que "disparition"</p>
+</section>
+
+
+<section>
+	<h3>Encore plus de puissance de calcul</h3>
+	<br>
+	<img src="images/gpu.png", width="900">
+	<br>
+</section>
+
+<section>
+	<h3>Plus de puissance de calcul</h3>
+	<br>
+	<img src="images/cpu.png", width="800">
+	<br>
+	Source: https://ourworldindata.org/
+</section>
+
+
+
+dans de nombreuses juridictions, mais la reprise d’éléments originaux reconnaissables ou d’un enregistrement peut constituer une contrefaçon.
+L’usage de marques relève d’un autre risque, de même que la concurrence déloyale. Ainsi, les auteurs et innovateurs disposent de moyens pour défendre leurs droits.
+
+Concernant la  protection des contenus générés par IA, elle dépend du rôle humain : en droit européen, seule une création intellectuelle humaine est protégée ; sans apport créatif identifiable, l’utilisateur ne bénéficie pas d’un droit d’auteur. 
+En pratique pour les créateurs, il est important de documenter les corpus, respecter les opt‑outs, privilégier des catalogues ou licences claires, tracer prompts et versions, et publier le résumé des contenus d’entraînement pour les modèles « GPAI » conformément à l’AI Act. Mettre en place des contrats adaptés (licences, garanties, clauses d’indemnisation).
